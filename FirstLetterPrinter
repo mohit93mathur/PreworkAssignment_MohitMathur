@@ -1,0 +1,31 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class FirstLetterPrinter {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter String");
+		String input = in.nextLine();
+		firstLetterPrinter(input);
+	}
+	
+	static void firstLetterPrinter(String str){
+	    char[] Str2 = new char[str.length()];
+	    int j=1;
+	    Str2[0] = str.charAt(0);
+	      try {
+	    	for(int i=1; i<str.length();i++) {  
+	    		if (str.charAt(i) ==' ') {
+	    			str.getChars(i+1, i+2, Str2, j);
+	    			j++;
+	    		}
+	    		
+	    	}
+	         System.out.print("Copied Value = " );
+	         System.out.println(Str2);
+	      } catch ( Exception ex) {
+	         System.out.println("Raised exception...");
+	      }
+	}
+}
